@@ -1,30 +1,194 @@
+/* ===== Global Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f5f5f5;
+  text-align: center;
+  min-height: 100vh;
+}
 
-const form = document.getElementById("contactForm");
-const statusText = document.getElementById("formStatus");
+/* ===== Navigation ===== */
+header, .nav1 {
+  background: #111;
+  padding: 18px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+nav ul, .nav1 ul {
+  list-style: none;
+}
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+nav ul li, .nav1 ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
 
+nav ul li a, .nav1 ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-  if (name === "" || email === "" || message === "") {
-    statusText.textContent = "❌ Please fill all the fields.";
-    statusText.style.color = "#ff6b6b";
-    return;
-  }
+nav ul li a:hover,
+.nav1 ul li a:hover {
+  color: #00e0ff;
+}
 
-  statusText.textContent = "✅ Message sent successfully!";
-  statusText.style.color = "#00ffcc";
-  let count = localStorage.getItem("contactCount");
-  count = count ? Number(count) + 1 : 1;
-  localStorage.setItem("contactCount", count);
+/* ===== Container Styling ===== */
+.container,
+.contact-box,
+.intro {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 50px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
 
-  console.log("Total form submissions:", count);
+/* ===== Headings ===== */
+h1 {
+  font-size: 2.5rem;
+  color: #00e0ff;
+  margin-bottom: 20px;
+}
 
-  form.reset();
-});
+h3 {
+  color: #ffd166;
+  margin-bottom: 20px;
+}
 
+/* ===== Paragraph ===== */
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===== Buttons ===== */
+.btn, button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #00b4d8;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+  background: #0077b6;
+  transform: translateY(-3px);
+}
+
+/* ===== Image Styling ===== */
+img {
+  width: 200px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 4px solid #00e0ff;
+}
+
+/* ===== Project Cards ===== */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  width: 300px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  background: rgba(0, 224, 255, 0.15);
+}
+
+.project-card h2 {
+  color: #ffd166;
+  margin-bottom: 15px;
+}
+
+/* ===== Skills Section (Redesigned) ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.08);
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  background: rgba(0,224,255,0.15);
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #00e0ff;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  color: #ffd166;
+}
+
+/* Removed Progress Bars Completely */
+
+/* ===== Contact Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.social {
+  margin-top: 30px;
+}
+
+.social a {
+  color: #00e0ff;
+  font-size: 1.6rem;
+  margin: 0 12px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #ffd166;
+}

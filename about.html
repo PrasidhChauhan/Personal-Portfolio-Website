@@ -3,135 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Shaurya Aggarwal</title>
+  <title>About - Prasidh Chauhan</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0b2545;
-      color: white;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       text-align: center;
     }
 
     header {
-      background-color: #e50914;
+      background-color: #111;
       padding: 15px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
-    header nav ul {
+    nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    header nav ul li {
-      display: inline;
+    nav ul li {
+      display: inline-block;
       margin: 0 20px;
     }
 
-    header nav ul li a {
+    /* NAV LINKS */
+    nav ul li a {
+      color: #fff;
       text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.3s;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
     }
 
-    header nav ul li a:hover {
-      color: #ffb703;
-      text-decoration: underline;
+    /* Hover Circle Effect */
+    nav ul li a:hover {
+      color: #00e0ff;
+      background: rgba(0, 224, 255, 0.15);
+      box-shadow: 0 0 10px rgba(0,224,255,0.5);
     }
 
+    /* Active Page Circle */
+    .active-page {
+      background: linear-gradient(45deg, #ff4d6d, #ff758f);
+      color: #fff !important;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+    }
+
+    /* MAIN CONTAINER */
     .container {
-      max-width: 850px;
-      margin: 50px auto;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-      text-align: center;
-      backdrop-filter: blur(6px);
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0,224,255,0.3);
     }
 
     img {
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
+      border: 4px dotted #00e0ff;
       margin-bottom: 20px;
-      border: 6px dashed #ffb703;
-      width: 230px;
-      height: 230px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: 0.3s;
     }
 
     img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 40px #ff4ecb;
+      box-shadow: 0 0 20px rgba(0,224,255,0.6);
     }
 
     h1 {
-      color: #39ff14;
-      margin-bottom: 15px;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      color: #00e0ff;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.8;
-      text-align: justify; /* 💡 aligns text evenly */
-      text-justify: inter-word;
-      margin: 10px 0;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+      text-align: justify;
     }
 
-    /* 💡 New section for contact info */
+    /* CONTACT INFO */
     .contact-info {
       margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-info p {
       text-align: center;
+      margin: 12px 0;
       font-size: 1rem;
-      line-height: 2;
     }
 
-    .contact-info a {
-      color: #ffb703;
-      text-decoration: none;
-      font-weight: bold;
-      margin-left: 5px;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-      color: #ff69b4;
-    }
-
-    /* Add hover animation to icons */
     .contact-info i {
       margin-right: 10px;
-      color: #00ffcc;
-      transition: transform 0.3s, color 0.3s;
+      color: #00e0ff;
+      transition: 0.3s;
     }
 
     .contact-info i:hover {
       transform: scale(1.2);
-      color: #ff69b4;
+      color: #ffd166;
     }
 
-    .back-btn {
+    .contact-info a {
+      color: #ffd166;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      color: #00e0ff;
+    }
+
+    /* BUTTON */
+    .btn {
       display: inline-block;
-      background-color: #ff007f;
-      color: white;
-      padding: 12px 25px;
+      background: linear-gradient(45deg, #00b4d8, #0077b6);
+      color: #fff;
+      padding: 10px 22px;
       border-radius: 25px;
       text-decoration: none;
-      margin-top: 25px;
+      font-weight: 600;
       transition: 0.3s;
+      margin-top: 20px;
     }
 
-    .back-btn:hover {
-      background-color: #ff4db8;
-      transform: scale(1.05);
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 15px rgba(0,180,216,0.6);
     }
+
   </style>
 </head>
 <body>
@@ -140,8 +158,8 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Project</a></li>
+        <li><a href="about.html" class="active-page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="contact.html">Contact Me</a></li>
       </ul>
@@ -149,25 +167,49 @@
   </header>
 
   <div class="container">
-    <img src="./profile.jpg" alt="Shaurya Aggarwal">
+    <img src="./Prasidh.jpeg" alt="Prasidh Chauhan">
 
-    <h1>Shaurya Aggarwal</h1>
+    <h1>Prasidh Chauhan</h1>
 
-    <p>Hi, I’m Shaurya Aggarwal, a BCA student at JIIT with a deep interest in web development and technology. I love turning ideas into interactive and responsive websites using HTML, CSS, and JavaScript.</p>
+    <p>
+      Hello! I am Prasidh Chauhan, currently pursuing Bachelor of Computer Applications (BCA) 
+      at JIIT and studying in the 4th semester. I am passionate about software development, 
+      web technologies, and building impactful digital solutions.
+    </p>
 
-    <p>My journey in web development began with curiosity about how websites work, and since then, I’ve been constantly learning and experimenting with different design and coding tools. I aim to become a professional full-stack web developer and later explore the field of cybersecurity. I believe that technology can make life easier and more creative, and I want to contribute to that change.</p>
+    <p>
+      Throughout my academic journey, I have developed strong foundations in C, Python, 
+      Data Structures, and front-end development. I enjoy creating responsive websites 
+      and continuously improving my problem-solving and programming skills.
+    </p>
 
-    <p>When I’m not coding, I enjoy learning about new tech trends, reading blogs, and designing creative web layouts. I’m passionate, curious, and always ready to learn something new. Feel free to check out my projects and skills pages to know more about my work and journey!</p>
+    <p>
+      My goal is to become a skilled full-stack developer and contribute to innovative 
+      projects that create real-world impact.
+    </p>
 
-    <!-- 💡 Contact info section -->
+    <!-- CONTACT DETAILS -->
     <div class="contact-info">
-      <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:shauryaaggnoida1@gmail.com">shauryaaggnoida1@gmail.com</a></p>
-      <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +91 9354236940</p>
-      <p><i class="fa-brands fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/Shaurya2006-hash" target="_blank">github.com/Shaurya2006-hash</a></p>
-      <p><i class="fa-brands fa-instagram"></i> <strong>Instagram:</strong> <a href="https://instagram.com/shauryaaggarwal53." target="_blank">shauryaaggarwal53</a></p>
+      <p><i class="fa-solid fa-envelope"></i>
+        <strong>Email:</strong> 
+        <a href="mailto:hanu.prasidh@gmail.com">hanu.prasidh@gmail.com</a>
+      </p>
+
+      <p><i class="fa-solid fa-phone"></i>
+        <strong>Phone:</strong> 
+        +91 8076009513
+      </p>
+
+      <p><i class="fa-brands fa-github"></i>
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/PrasidhChauhan" target="_blank">
+          github.com/PrasidhChauhan
+        </a>
+      </p>
     </div>
 
-    <a href="PersonalPortfolio.html" class="back-btn">← Back to Home</a>
+    <a href="index.html" class="btn">← Back to Home</a>
+
   </div>
 
 </body>

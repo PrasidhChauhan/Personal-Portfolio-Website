@@ -15,13 +15,13 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
-      text-align: center;
     }
 
     header {
       background-color: #111;
       padding: 15px 0;
       box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      text-align: center;
     }
 
     nav ul {
@@ -35,7 +35,6 @@
       margin: 0 20px;
     }
 
-    /* NAV LINKS */
     nav ul li a {
       color: #fff;
       text-decoration: none;
@@ -45,14 +44,12 @@
       transition: all 0.3s ease;
     }
 
-    /* Hover Circle Effect */
     nav ul li a:hover {
       color: #00e0ff;
       background: rgba(0, 224, 255, 0.15);
       box-shadow: 0 0 10px rgba(0,224,255,0.5);
     }
 
-    /* Active Page Circle */
     .active-page {
       background: linear-gradient(45deg, #ff4d6d, #ff758f);
       color: #fff !important;
@@ -61,36 +58,49 @@
 
     /* MAIN CONTAINER */
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 80px auto;
-      padding: 40px;
+      padding: 50px;
       background: rgba(255,255,255,0.08);
       border-radius: 18px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px rgba(0,224,255,0.3);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 25px rgba(0,224,255,0.3);
     }
 
-    img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 4px dotted #00e0ff;
-      margin-bottom: 20px;
-      transition: 0.3s;
+    /* ABOUT FLEX LAYOUT */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
     }
 
-    img:hover {
+    /* IMAGE SECTION */
+    .about-img img {
+      width: 260px;
+      height: 260px;
+      border-radius: 20px;
+      border: 4px solid #00e0ff;
+      transition: 0.3s ease;
+    }
+
+    .about-img img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,224,255,0.6);
+      box-shadow: 0 0 25px rgba(0,224,255,0.6);
     }
 
-    h1 {
+    /* CONTENT SECTION */
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h1 {
       font-size: 2.5rem;
       color: #00e0ff;
       margin-bottom: 20px;
     }
 
-    p {
+    .about-content p {
       font-size: 1.05rem;
       line-height: 1.8;
       color: #e0e0e0;
@@ -100,13 +110,12 @@
 
     /* CONTACT INFO */
     .contact-info {
-      margin-top: 30px;
+      margin-top: 25px;
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.2);
     }
 
     .contact-info p {
-      text-align: center;
       margin: 12px 0;
       font-size: 1rem;
     }
@@ -150,6 +159,18 @@
       box-shadow: 0 0 15px rgba(0,180,216,0.6);
     }
 
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-content p {
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -167,49 +188,56 @@
   </header>
 
   <div class="container">
-    <img src="./Prasidh.jpeg" alt="Prasidh Chauhan">
+    <div class="about-section">
 
-    <h1>Prasidh Chauhan</h1>
+      <div class="about-img">
+        <img src="./Prasidh.jpeg" alt="Prasidh Chauhan">
+      </div>
 
-    <p>
-      Hello! I am Prasidh Chauhan, currently pursuing Bachelor of Computer Applications (BCA) 
-      at JIIT and studying in the 4th semester. I am passionate about software development, 
-      web technologies, and building impactful digital solutions.
-    </p>
+      <div class="about-content">
+        <h1>Prasidh Chauhan</h1>
 
-    <p>
-      Throughout my academic journey, I have developed strong foundations in C, Python, 
-      Data Structures, and front-end development. I enjoy creating responsive websites 
-      and continuously improving my problem-solving and programming skills.
-    </p>
+        <p>
+          Hello! I am Prasidh Chauhan, currently pursuing Bachelor of Computer Applications (BCA) 
+          at JIIT and studying in the 4th semester. I am passionate about software development, 
+          web technologies, and building impactful digital solutions.
+        </p>
 
-    <p>
-      My goal is to become a skilled full-stack developer and contribute to innovative 
-      projects that create real-world impact.
-    </p>
+        <p>
+          Throughout my academic journey, I have developed strong foundations in C, Python, 
+          Data Structures, and front-end development. I enjoy creating responsive websites 
+          and continuously improving my problem-solving and programming skills.
+        </p>
 
-    <!-- CONTACT DETAILS -->
-    <div class="contact-info">
-      <p><i class="fa-solid fa-envelope"></i>
-        <strong>Email:</strong> 
-        <a href="mailto:hanu.prasidh@gmail.com">hanu.prasidh@gmail.com</a>
-      </p>
+        <p>
+          My goal is to become a skilled full-stack developer and contribute to innovative 
+          projects that create real-world impact.
+        </p>
 
-      <p><i class="fa-solid fa-phone"></i>
-        <strong>Phone:</strong> 
-        +91 8076009513
-      </p>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong> 
+            <a href="mailto:hanu.prasidh@gmail.com">hanu.prasidh@gmail.com</a>
+          </p>
 
-      <p><i class="fa-brands fa-github"></i>
-        <strong>GitHub:</strong> 
-        <a href="https://github.com/PrasidhChauhan" target="_blank">
-          github.com/PrasidhChauhan
-        </a>
-      </p>
+          <p><i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong> 
+            +91 8076009513
+          </p>
+
+          <p><i class="fa-brands fa-github"></i>
+            <strong>GitHub:</strong> 
+            <a href="https://github.com/PrasidhChauhan" target="_blank">
+              github.com/PrasidhChauhan
+            </a>
+          </p>
+        </div>
+
+        <a href="index.html" class="btn">← Back to Home</a>
+
+      </div>
+
     </div>
-
-    <a href="index.html" class="btn">← Back to Home</a>
-
   </div>
 
 </body>

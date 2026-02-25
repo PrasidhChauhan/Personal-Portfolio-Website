@@ -3,72 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Shaurya Aggarwal</title>
+  <title>Prasidh Chauhan | Projects</title>
 
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #f4f4f9;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       text-align: center;
-      overflow-x: hidden;
     }
 
     header {
-      background-color: #ff0054;
+      background-color: #111;
       padding: 15px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
-    header nav ul {
+    nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    header nav ul li {
-      display: inline;
+    nav ul li {
+      display: inline-block;
       margin: 0 20px;
     }
 
-    header nav ul li a {
+    nav ul li a {
+      color: #fff;
       text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: color 0.3s, transform 0.2s;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 8px 18px;
+      border-radius: 25px;
     }
 
-    header nav ul li a:hover {
-      color: #ffcc00;
-      transform: scale(1.1);
+    nav ul li a:hover {
+      color: #00e0ff;
     }
+
+    /* Active Page Highlight */
+    .active-page {
+      background: linear-gradient(45deg, #ff4d6d, #ff758f);
+      color: #fff !important;
+    }
+
+    .active-page:hover {
+      background: linear-gradient(45deg, #ff006e, #fb5607);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 0, 110, 0.6);
+    }
+
     .container {
       max-width: 1200px;
-      margin: 60px auto;
-      padding: 30px;
-      text-align: center;
+      margin: 80px auto;
+      padding: 40px;
     }
 
     h1 {
       font-size: 2.6rem;
-      color: #ffd60a;
+      color: #00e0ff;
       margin-bottom: 15px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
     p.intro {
       font-size: 1.1rem;
       color: #dcdcdc;
-      margin-bottom: 40px;
-      font-style: italic;
+      margin-bottom: 50px;
     }
 
-    /* Project grid */
     .projects-grid {
       display: flex;
       justify-content: center;
@@ -77,117 +84,97 @@
     }
 
     .project-card {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.08);
       width: 320px;
-      padding: 25px 20px;
+      padding: 30px 20px;
       border-radius: 18px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: 0.3s;
       backdrop-filter: blur(10px);
     }
 
     .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 35px rgba(255, 204, 0, 0.4);
+      background: rgba(0,224,255,0.15);
+      box-shadow: 0 0 20px rgba(0,224,255,0.5);
     }
 
     .project-card h2 {
-      color: #00eaff;
-      font-size: 1.4rem;
+      color: #ffd166;
       margin-bottom: 15px;
-      text-transform: uppercase;
     }
 
     .project-card p {
-      font-size: 1rem;
-      line-height: 1.6;
       color: #e0e0e0;
+      font-size: 0.95rem;
       margin-bottom: 25px;
     }
+
     .btn {
       display: inline-block;
-      background: linear-gradient(90deg, #ff0054, #ff5400);
-      color: white;
-      padding: 10px 25px;
+      background: linear-gradient(45deg, #00b4d8, #0077b6);
+      color: #fff;
+      padding: 10px 22px;
       border-radius: 25px;
       text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      transition: background 0.3s, transform 0.3s;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: linear-gradient(90deg, #ff7b00, #ff0054);
-      transform: scale(1.07);
+      transform: scale(1.08);
+      box-shadow: 0 0 15px rgba(0,180,216,0.6);
     }
-    .project-card:nth-child(2) {
-      border: 2px solid #00eaff;
-    }
-    .project-card:nth-child(3) {
-      border: 2px solid #ffd60a;
-    }
+
   </style>
 </head>
+
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active-page">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <div class="container">
-    <h1>My Projects</h1>
-    <p class="intro">
-      Here are some of my featured programming projects demonstrating my skills in C and Python development.
-    </p>
+<div class="container">
+  <h1>My Projects</h1>
+  <p class="intro">
+    Here are some of my featured programming projects demonstrating my development skills.
+  </p>
 
-    <div class="projects-grid">
+  <div class="projects-grid">
 
-      <!-- Telecom Billing System -->
-      <div class="project-card">
-        <h2> Telecom Billing System</h2>
-        <p>
-          A console-based Telecom Billing System in C.  
-          It manages customer details, generates bills, and maintains call records efficiently.
-        </p>
-        <a href="https://github.com/Shaurya2006-hash/Telecom-Billing-System" target="_blank" class="btn">
-          <i class="fa-brands fa-github"></i> View Source Code
-        </a>
-      </div>
-
-      <!-- Task Management System -->
-      <div class="project-card">
-        <h2> Task Management System</h2>
-        <p>
-          A C-based project to add, view, edit, and delete tasks.  
-          Uses file handling to store and retrieve user data for task management.
-        </p>
-        <a href="https://github.com/Shaurya2006-hash/Task-Management-System" target="_blank" class="btn">
-          <i class="fa-brands fa-github"></i> View Source Code
-        </a>
-      </div>
-
-      <!-- Library Management System -->
-      <div class="project-card">
-        <h2>📚 Library Management System</h2>
-        <p>
-          A Python-based Library Management System that allows users to issue, return, and search books easily.  
-          Helps manage student and book records with a user-friendly console interface.
-        </p>
-        <a href="https://github.com/Shaurya2006-hash/Library-Management-System" target="_blank" class="btn">
-          <i class="fa-brands fa-github"></i> View Source Code
-        </a>
-      </div>
-
+    <div class="project-card">
+      <h2>AI Impact on Society Website</h2>
+      <p>
+         A responsive informational website built to showcase the impact of Artificial 
+        Intelligence on modern society. The website includes a structured Home page, 
+        detailed About section, and an interactive Contact page. Designed using HTML, 
+        CSS, and JavaScript with a clean and user-friendly interface.
+      </p>
+      <a href="https://github.com/PrasidhChauhan/Website-on-AI" target="_blank" class="btn">
+        <i class="fa-brands fa-github"></i> View Source Code
+      </a>
     </div>
+    <div class="project-card">
+      <h2>Library Management System</h2>
+      <p>
+        A Python-based system to issue, return, and search books 
+        with efficient record management.
+      </p>
+      <a href="https://github.com/PrasidhChauhan/Library-Management-System" target="_blank" class="btn">
+        <i class="fa-brands fa-github"></i> View Source Code
+      </a>
+    </div>
+
   </div>
+</div>
 
 </body>
 </html>

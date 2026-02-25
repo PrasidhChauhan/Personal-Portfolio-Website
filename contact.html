@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Shaurya Aggarwal</title>
+  <title>Prasidh Chauhan | Contact</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
-      font-family: Poppins, sans-serif;
-      background-color: #0e3a6d; 
-      color: #f8f9fa;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       text-align: center;
     }
 
     header {
-      background-color: #d90429;
+      background-color: #111;
       padding: 15px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
     nav ul {
@@ -28,76 +30,94 @@
 
     nav ul li {
       display: inline-block;
-      margin: 0 15px;
+      margin: 0 20px;
     }
 
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.2s;
+      transition: 0.3s;
     }
 
     nav ul li a:hover {
-      color: #ffd166;
+      color: #00e0ff;
+    }
+
+    /* ===== Special Contact Button ===== */
+    .contact-btn {
+      background: linear-gradient(45deg, #ff4d6d, #ff758f);
+      padding: 8px 20px;
+      border-radius: 25px;
+      color: #fff !important;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: linear-gradient(45deg, #ff006e, #fb5607);
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 0, 110, 0.6);
     }
 
     .contact-box {
-      width: 80%;
+      width: 85%;
       max-width: 750px;
-      margin: 70px auto;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      margin: 80px auto;
+      padding: 50px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
     }
 
     h1 {
+      font-size: 2.4rem;
       color: #00e0ff;
-      font-size: 2.2rem;
       margin-bottom: 10px;
     }
 
     p.desc {
-      color: #d9d9d9;
-      margin-bottom: 30px;
+      color: #dcdcdc;
+      margin-bottom: 35px;
     }
 
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
     }
 
     input, textarea {
-      width: 80%;
-      padding: 12px;
-      border: 1px solid #ccc;
+      width: 85%;
+      padding: 14px;
       border-radius: 8px;
+      border: none;
       font-size: 1rem;
       outline: none;
+      background: rgba(255,255,255,0.9);
     }
 
     textarea {
-      height: 100px;
+      height: 120px;
       resize: none;
     }
 
     button {
-      background: #0077b6;
-      color: #fff;
+      margin-top: 10px;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #00b4d8, #0077b6);
+      color: white;
       border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
+      border-radius: 30px;
       font-weight: 600;
       cursor: pointer;
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
     button:hover {
-      background: #005f8a;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
     }
 
     .social {
@@ -106,49 +126,53 @@
 
     .social a {
       color: #00e0ff;
-      font-size: 1.6rem;
-      margin: 0 10px;
+      font-size: 1.8rem;
+      margin: 0 15px;
       transition: 0.3s;
     }
 
     .social a:hover {
       color: #ffd166;
+      transform: scale(1.2);
     }
+
   </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <div class="contact-box">
-    <h1>Contact Me</h1>
-    <p class="desc">Want to collaborate or just say hello? Fill out the form below.</p>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html" class="contact-btn">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Full Name" required>
-      <input type="email" id="email" placeholder="Your Email Address" required>
-      <textarea id="message" placeholder="Type your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="formStatus" style="margin-top:15px; font-weight:600;"></p>
+<div class="contact-box">
+  <h1>Contact Me</h1>
+  <p class="desc">Want to collaborate, discuss a project, or just say hello? I’d love to hear from you.</p>
 
-    <div class="social">
-      <a href="mailto:shauryaaggnoida1@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://github.com/Shaurya2006-hash" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://linkedin.com/in/shaurya-aggarwal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://instagram.com/shauryaaggarwal53" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    </div>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Full Name" required>
+    <input type="email" id="email" placeholder="Your Email Address" required>
+    <textarea id="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="formStatus" style="margin-top:15px; font-weight:600;"></p>
+
+  <div class="social">
+    <a href="mailto:hanu.prasidh@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://github.com/PrasidhChauhan" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/prasidh-chauhan-4906b8301/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
   </div>
-  <script src="CodeClassroom/form.js"></script>
+</div>
+
+<script src="CodeClassroom/form.js"></script>
 </body>
 </html>
